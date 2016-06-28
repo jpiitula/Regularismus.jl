@@ -1,5 +1,17 @@
 module Regularismus
 
-# package code goes here
+import Base: ==, cat, int
+export @wx_str, rx
+export bots, tops, alt, star, plus
+export botr, topr
 
-end # module
+typealias WordType ASCIIString
+const ABET = Set("abcd")
+const NULL = 'e'
+
+@assert typeof(NULL) == eltype(ABET)
+@assert !(NULL in ABET)
+
+include("Ex.jl")
+
+end
